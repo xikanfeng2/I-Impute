@@ -47,7 +47,7 @@ data = pd.read_csv('simluation-data/sim-counts.csv', index_col=0)
 iimpute_operator = iimpute.IImpute(normalize=False)
 
 # impute
-imputed_data = iimpute_operator.impute()
+imputed_data = iimpute_operator.impute(data)
 
 # store result to a file
 imputed_data.to_csv('your file name')
@@ -56,7 +56,7 @@ imputed_data.to_csv('your file name')
 iimpute_operator = iimpute.IImpute(normalize=False, iteration=True)
 
 # impute
-imputed_data = iimpute_operator.impute()
+imputed_data = iimpute_operator.impute(data)
 
 # store result to a file
 imputed_data.to_csv('your file name')
