@@ -69,24 +69,31 @@ IImpute(n=20, c_drop=0.5, p_pca=0.4, alpha=0.01, normalize=True, iteration=False
 Parameters
 
 * n : int, optional, default: 20
-    nth of nearest neighbors on which to build kernel when calculating affinity matrix.
+
+    The nth of nearest neighbors on which to build kernel when calculating affinity matrix.
 
 * c_drop : float, optional, default: 0.5
+
     Dropout event cutoff. For entry whose dropout probability is less than c_drop, we consider it as a real observation, its original value will remain. Otherwise, we conduct the imputation with the aid of information from similar cells.
 
 * p_pca : float, optional, default: 0.4
+
     Percentage of variance explained by the selected components of PCA. It determines the nmumber of PCs used to calculate the distance between cells.
 
 * alpha : float, optional, default: 0.01
+
     L1 penalty for Lasso regression.
     
 * normalize : boolean, optional, default: True
+
     By default, I-Impute takes in an unnormalized matrix and performs library size normalization during the denoising step. However, if your data is already normalized or normalization is not desired, you can set normalize=False.
 
 * iteration : boolean, optional, default: False
+
     The imputation process only performs once when False (it is equivalent to C-Impute described in our paper). The imputation process will iterate n times to achieve self-constistent imputation matrix.
 
 * verbose : `int` or `boolean`, optional, default: 1
+
     If `True` or `> 0`, print status messages
 
 ## Cite us
