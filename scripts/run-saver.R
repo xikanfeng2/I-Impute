@@ -1,0 +1,5 @@
+library(SAVER)
+args <- commandArgs(TRUE)
+data <-read.table(args[1],header=TRUE,row.name=1,sep=',')
+cortex.saver <- saver(data, ncores = 12,estimates.only = TRUE)
+write.csv(cortex.saver,args[2])
