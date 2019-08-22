@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="I_Impute",
+    name="i-impute",
     version="1.0.0",
     author="Xikang Feng",
     author_email="xikanfeng2@gmail.com",
