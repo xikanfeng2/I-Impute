@@ -260,6 +260,8 @@ class IImpute:
                     np.sum(mix_p_norm * np.power(row - mean, 2)) / np.sum(mix_p_norm))
                 if std == 0 or np.isnan(std):
                     std = 0.01
+                if np.sum(mix_p_gamma) == 0:
+                    break
                 shape, rate = self._update_gamma_param(row, mix_p_gamma)
                 dmix = pi * gamma.pdf(row, a=shape, scale=1/rate) + \
                     (1 - pi) * norm.pdf(row, loc=mean, scale=std)
