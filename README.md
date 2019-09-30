@@ -1,6 +1,6 @@
-# I-Impute: a coherent strategy to impute singlecell RNA sequencing data
+# I-Impute: a self-consistent method to impute single cell RNA sequencing data
 
-I-Impute is a coherent method to impute scRNA-seq data. I-Impute leverages continuous similarities and dropout probabilities and refines the data iteratively to make the final outputself-consistent. I-Impute exhibits robust imputation ability and follows the coherent principle. It offers perspicacity to uncover the underlying cell subtypes in real scRNA-Seq data.
+I-Impute is a “self-consistent” method method to impute scRNA-seq data. I-Impute leverages continuous similarities and dropout probabilities and refines the data iteratively to make the final output "self-consistent". I-Impute exhibits robust imputation ability and follows the “self-consistency” principle. It offers perspicacity to uncover the underlying cell subtypes in real scRNA-Seq data. 
 
 ## Pre-requirements
 * python3
@@ -97,7 +97,7 @@ Parameters
     If `True` or `> 0`, print status messages
 
 ## Cite us
-TBD
+Feng, X., Chen, L., Wang, Z., & Li, S. C. (2019). I-Impute: a self-consistent method to impute single cell RNA sequencing data. bioRxiv, 772723. doi: https://doi.org/10.1101/772723.
 
 ## Help
 If you have any questions or require assistance using I-Impute, please contact us with xikanfeng2@gmail.com.
