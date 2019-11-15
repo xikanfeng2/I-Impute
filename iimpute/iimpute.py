@@ -356,16 +356,16 @@ class IImpute:
         nth_smallest_dist_index = self.n - 1
         nth_smallest_dist_vector = np.partition(
             remained_dist_matrix, nth_smallest_dist_index, axis=1)[:, nth_smallest_dist_index]
-        remained_dist_matrix[remained_dist_matrix > nth_smallest_dist_vector] = 0
-        larged_indexes = np.column_stack(
-            np.where(remained_dist_matrix <= nth_smallest_dist_vector))
+        
         exp_matrix = np.exp(-remained_dist_matrix /
                             (2 * np.power(nth_smallest_dist_vector, 2)))
+        larged_indexes = np.column_stack(
+            np.where(remained_dist_matrix <= nth_smallest_dist_vector))
+        remained_dist_matrix[remained_dist_matrix >
+                             nth_smallest_dist_vector] = 0            
         for index in larged_indexes:
             remained_dist_matrix[index[0]][index[1]
                                         ] = exp_matrix[index[0]][index[1]]
-       
-
         tasklogger.log_info('calculating the droupout probability matrix using EM algorithm...')
         # EM algorithm
         D = self._EM_algorithm(remained_data)
