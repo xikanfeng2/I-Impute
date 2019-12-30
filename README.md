@@ -34,7 +34,7 @@ python setup.py install
 ## Usage
 
 ### Quick start
-The following code runs MAGIC on simulation data located in the I-Impute repository.
+The following code runs I-Impute on simulation data located in the I-Impute repository.
 
 ```Python
 import iimpute
