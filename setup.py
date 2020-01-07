@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="i-impute",
-    version="1.0.4",
+    version="1.0.5",
     author="Xikang Feng",
     author_email="xikanfeng2@gmail.com",
-    description="I-Impute: a coherent strategy to impute singlecell RNA sequencing data",
+    description="I-Impute: a self-consistent method to impute single cell RNA sequencing data",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/xikanfeng2/I-Impute",
