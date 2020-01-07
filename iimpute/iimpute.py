@@ -248,9 +248,12 @@ class IImpute:
             while(eps > 0.5):
                 # calculate weight
                 p_gamma = pi * gamma.pdf(row, a=shape, scale=1/rate)
+                p_gamma[np.isnan(p_gamma)] = self.ZERO_VALUE
                 p_norm = (1 - pi) * norm.pdf(row, loc=mean, scale=std)
                 p_norm[np.isnan(p_norm)] = self.ZERO_VALUE
                 mix_p_gamma = p_gamma/(p_gamma + p_norm)
+                mix_p_gamma[np.isnan(mix_p_gamma)
+                            ] = self.ZERO_VALUE
                 mix_p_norm = 1 - mix_p_gamma
 
                 # update params
@@ -276,6 +279,7 @@ class IImpute:
             p_gamma = pi * gamma.pdf(row, a=shape, scale=1/rate)
             p_norm = (1 - pi) * norm.pdf(row, loc=mean, scale=std)
             mix_p_gamma = p_gamma/(p_gamma + p_norm)
+            mix_p_gamma[np.isnan(mix_p_gamma)] = self.ZERO_VALUE
             D[index] = mix_p_gamma
         return D
 
