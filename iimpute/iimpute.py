@@ -454,7 +454,7 @@ class IImpute:
         tasklogger.log_start('I-Impute')
         imputed_data = None
         if self.iteration:
-            exp_mse = 0.1
+            exp_mse = 1
             mse = 100
             previous_imputed_data = data
             iteration = 1

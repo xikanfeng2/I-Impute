@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="i-impute",
-    version="1.0.5",
+    version="1.0.6",
     author="Xikang Feng",
     author_email="xikanfeng2@gmail.com",
     description="I-Impute: a self-consistent method to impute single cell RNA sequencing data",
