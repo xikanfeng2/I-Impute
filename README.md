@@ -97,7 +97,9 @@ Parameters
     If `True` or `> 0`, print status messages
 
 ## Cite us
-Feng, X., Chen, L., Wang, Z., & Li, S. C. (2019). I-Impute: a self-consistent method to impute single cell RNA sequencing data. bioRxiv, 772723. doi: https://doi.org/10.1101/772723.
+Welcome to cits our paper if you use iimput in your work.
+
+Feng, X., Chen, L., Wang, Z. et al. I-Impute: a self-consistent method to impute single cell RNA sequencing data. BMC Genomics 21, 618 (2020). https://doi.org/10.1186/s12864-020-07007-w
 
 ## Help
 If you have any questions or require assistance using I-Impute, please contact us with xikanfeng2@gmail.com.
